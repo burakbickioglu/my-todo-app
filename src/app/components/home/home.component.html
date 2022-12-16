@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="mb-3 mt-2">
+    <app-add-undone [unDoneModels]="unDoneModels">
+      <label for="input" class="label control">Yapılacak İş</label>
+<!-- <input type="text" [(ngModel)]="unDoneInput" class="form-control" /> -->
+<input type="text" class="form-control" #addInput />
+<button class="btn btn-primary mt-2" (click)="addUnDoneItem(addInput)">Ekle</button>
+      <h1>Deneme</h1>
+    </app-add-undone>
+  </div>
+  <div class="row mt-2">
+    <div class="col-md-6">
+      <app-undone
+        [unDoneModels]="unDoneModels"
+        [doneModels]="doneModels"
+      ></app-undone>
+    </div>
+    <div class="col-md-6">
+      <app-done
+        [doneModels]="doneModels"
+        [unDoneModels]="unDoneModels"
+      ></app-done>
+    </div>
+  </div>
+</div>

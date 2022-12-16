@@ -1,0 +1,14 @@
+<h3 class="text-primary">Yapılacaklar Listesi</h3>
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between" *ngFor="let unDone of unDoneModels">
+        {{ unDone.title }}
+        <div>
+            <button class="btn btn-success" (click)="completeUnDoneItem(unDone)">
+                Tamamla
+            </button>
+            <button class="btn btn-danger ms-1" (click)="deleteUnDoneItem(unDone)">
+                Sil
+            </button>
+        </div>
+    </li>
+</ul>
